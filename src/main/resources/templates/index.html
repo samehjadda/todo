@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Tasks</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/style/style.css}" />
+  </head>
+  <body>
+    <div class="box">
+      <div th:switch="${tasks}">
+        <h2 th:case="null">Looks like you chilling</h2>
+          <div th:case="*">
+            <h1>Get things done</h1>
+            <table>
+              <thead>
+                <tr>
+                  <th>Details</th>
+                  <th>Due Date</th>
+                  <th>Edit</th>
+                  <th>Delete</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr th:each="task : ${tasks}">
+                  <td th:text="${task.details}"></td>
+                  <td th:text="${task.dueDate}"></td>
+                  <td><a class="edit" th:href="@{/edit/{id}(id=${task.id})}">Edit</a></td>
+                  <td><a class="dele" th:href="@{/delete/{id}(id=${task.id})}">Delete</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        <p><a class="btn" href="/newTask">New Task</a></p>
+        <form class="btn" method="get" action="#" th:action="@{/logout}">
+          <input type="submit" value="Logout" />
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

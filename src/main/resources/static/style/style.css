@@ -1,0 +1,119 @@
+:root {
+    --mainc: #dadff7;
+    --fontc: #f5f0f6;
+    --sec: #011638;
+}
+html {
+    background-color: var(--mainc);
+    font-family: sans-serif;
+    color: var(--fontc);
+}
+.box {
+    color: var(--fontc);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 550px;
+    padding: 40px;
+    transform: translate(-50%, -50%);
+    background: var(--sec);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="date"] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    background-color: transparent;
+    color: white;
+}
+
+input[type="text"]:focus,
+input[type="date"]:focus {
+    background-color: transparent;
+    color: white;
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th,
+td {
+    text-align: left;
+    padding: 10px;
+}
+
+tr:nth-child(even) {
+    background-color: #dadff7;
+    color: black;
+}
+
+th {
+    background-color: transparent;
+    color: white;
+}
+.edit {
+    color: #0077ff;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 2px 4px;
+    border: 1px solid #0077ff;
+    border-radius: 3px;
+}
+
+.edit:hover {
+    color: white;
+    background-color: #0077ff;
+    text-decoration: none;
+}
+a {
+    color: #0077ff;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+a:hover {
+    color: #0099ff;
+    text-decoration: underline;
+}
+input[type="submit"] {
+    font-size: 24px;
+    background-color: #dadff7;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+input[type="submit"]:hover {
+    opacity: 0.8;
+}
+.dele {
+    color: #cc0000;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 2px 4px;
+    border: 1px solid #cc0000;
+    border-radius: 3px;
+}
+
+.dele:hover {
+    color: white;
+    background-color: #cc0000;
+    text-decoration: none;
+}
